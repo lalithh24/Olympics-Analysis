@@ -15,24 +15,15 @@ else 0 end)
 as total 
 from athletes_event_results
 
-
-
-
-
-
-
 select Sex, Age, Medal
 from athletes_event_results
 where (Age<30 AND Sex = 'M')
 AND Medal = 'Gold'
 
-
-
 select City,count(ID) AS total
 from athletes_event_results   --total participants by city
 Group by City
 Order by total DESC
-
 
 select Sport,count(ID) AS total
 from athletes_event_results --total IDS by sport
@@ -42,9 +33,6 @@ Order by total DESC
 select Event,count(ID) --total IDS by event
 from athletes_event_results
 Group by Event
-
-
-
 
 select count(medal)
 from athletes_event_results -- total medal count
